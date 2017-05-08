@@ -4,6 +4,7 @@
 </div>
 
 {{!-- This is the post loop - each post will be output using this markup --}}
+<div class='posts'>
 {{#foreach posts}}
 <article class="{{post_class}}">
     <header class="post-header">
@@ -20,6 +21,8 @@
     </footer>
 </article>
 {{/foreach}}
+</div>
 
 {{!-- Previous/next page links - displayed on every page --}}
+
 {{pagination}}

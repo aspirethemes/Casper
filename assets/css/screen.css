@@ -518,6 +518,26 @@ button {
     background: #5ba4e5;
 }
 
+.button--loading {
+    position: relative;
+    padding-right: 40px;
+  }
+
+  .button--loading:after {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    -webkit-animation: spinAround .5s infinite linear;
+    animation: spinAround .5s infinite linear;
+  }
 
 /* ==========================================================================
    3. Utilities - These things get used a lot
@@ -2189,6 +2209,28 @@ body.page-template .post-title {
 /* ==========================================================================
    14. Animations
    ========================================================================== */
+
+/* Used to animate the ajax loading button */
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+@keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
 
 /* Used to fade in title/desc on the home page */
 @-webkit-keyframes fade-in-down {

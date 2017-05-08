@@ -20,6 +20,11 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
 
+    {{!-- Ajax Load More required variables --}}
+    <script>
+        var pagination_next_page_number       = '{{ pagination.next }}',
+            pagination_available_pages_number = '{{ pagination.pages }}';
+    </script>
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
